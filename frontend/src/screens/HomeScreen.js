@@ -19,12 +19,10 @@ const HomeScreen = {
             <div class="product-brand">${product.brand}</div>
             <div class="product-price">$ ${product.price}</div>
           </div>
-        </li>
-      `
+        </li>`
       )
       .join('\n')}
-    </ul>  
-    `;
+    </ul>`;
   },
 };
 
