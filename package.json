@@ -1,0 +1,16 @@
+{
+  "name": "js-amazon",
+  "version": "1.0.0",
+  "description": "- Fonte: https://www.youtube.com/watch?v=N3FDyheHVMM",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hudson Andrade Viana <hudson1206@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
