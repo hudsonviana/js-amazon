@@ -3,6 +3,13 @@ import { parseRequestUrl } from '../utils';
 import Rating from '../components/Rating';
 
 const ProductScreen = {
+  after_render: async () => {
+    const request = parseRequestUrl();
+    document.querySelector('#add-button').addEventListener('click', () => {
+      document.location.hash = `/cart/${request.id}`;
+    });
+  },
+
   render: async () => {
     const request = parseRequestUrl();
     const product = await getProduct(request.id);
