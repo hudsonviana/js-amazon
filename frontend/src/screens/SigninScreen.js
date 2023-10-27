@@ -1,17 +1,19 @@
 import { signin } from '../api';
 import { getUserInfo, setUserInfo } from '../localStorage';
+import { hideLoading, showLoading, showMessage } from '../utils';
 
 const SigninScreen = {
   after_render: () => {
     document.querySelector('#signin-form').addEventListener('submit', async (e) => {
       e.preventDefault();
+      showLoading();
       const data = await signin({
         email: document.querySelector('#email').value,
         password: document.querySelector('#password').value,
       });
-
+      hideLoading();
       if (data.error) {
-        alert(data.error);
+        showMessage(data.error);
       } else {
         setUserInfo(data);
         document.location.hash = '/';
